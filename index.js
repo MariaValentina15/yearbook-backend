@@ -5,9 +5,11 @@ const PORT = 3000; // porta onde o servidor vai rodar localmente
 
 // rota GET na raiz — responde com JSON
 app.get('/', (req, res) => {
-  res.json({ mensagem: 'Yearbook API está no ar! 🎓' });
-  "status": "ok",
-  "timestamp": "2026-04-05T14:30:00.000Z"
+  res.json({
+    mensagem: 'Yearbook API está no ar! 🎓',
+    status: 'ok',
+    timestamp: new Date().toISOString() // retorna a data e hora atual em ISO
+  });
 });
 
 // inicia o servidor localmente — na Vercel essa parte é pulada
