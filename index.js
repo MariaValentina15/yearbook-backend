@@ -8,7 +8,15 @@ app.get('/', (req, res) => {
   res.json({
     mensagem: 'Yearbook API está no ar! 🎓',
     status: 'ok',
-    timestamp: new Date().toISOString() // retorna a data e hora atual em ISO
+    timestamp: new Date().toISOString() // data e hora atual em ISO
+  });
+});
+
+// rota GET /status — retorna apenas status e timestamp
+app.get('/status', (req, res) => {
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString() // data e hora atual em ISO
   });
 });
 
