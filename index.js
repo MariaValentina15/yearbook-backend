@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.get('/status', (req, res) => {
   res.json({
     status: 'ok',
-    timestamp: new Date().toISOString() // data e hora atual em ISO
+    timestamp: new Date() // data e hora atual em ISO
   });
 });
 
