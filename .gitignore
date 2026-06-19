@@ -34,12 +34,15 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://.gitignorenodejs.org/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Environment variables
+.env
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -142,5 +145,8 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
 
-# Environment variables
-.env
+/generated/prisma
+
+# Arquivos temporários de teste do Prisma
+temp-repl.js
+temp-desafio.js
