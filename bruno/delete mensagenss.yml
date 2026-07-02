@@ -1,0 +1,15 @@
+info:
+  name: delete mensagenss
+  type: http
+  seq: 15
+
+http:
+  method: DELETE
+  url: https://bug-free-umbrella-wrqxgq49p6qqc9qpj-3000.app.github.dev/mensagens
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,15 @@
+info:
+  name: Criar Aluno
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://bug-free-umbrella-wrqxgq49p6qqc9qpj-3000.app.github.dev/
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
