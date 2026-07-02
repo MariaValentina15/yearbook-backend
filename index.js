@@ -2,6 +2,7 @@
 import express from 'express';
 import logger from './middlewares/logger.js';
 import alunosRouter from './routes/alunos.js';
+import mensagensRouter from './routes/mensagens.js';
 
 // 2. Criar app e definir porta
 const app = express();
@@ -21,6 +22,7 @@ app.get('/status', (req, res) => {
 });
 
 app.use('/alunos', alunosRouter);
+app.use('/mensagens', mensagensRouter);
 
 // 5. Iniciar servidor localmente (Vercel ignora)
 if (process.env.VERCEL !== '1') {
