@@ -1,4 +1,5 @@
 // 1. Imports
+import 'dotenv/config';
 import express from 'express';
 import logger from './middlewares/logger.js';
 import alunosRouter from './routes/alunos.js';
@@ -6,7 +7,7 @@ import mensagensRouter from './routes/mensagens.js';
 
 // 2. Criar app e definir porta
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;  // lê do .env, com fallback para 3000
 
 // 3. Middlewares globais (na ordem correta)
 app.use(express.json());    // parseia body JSON
