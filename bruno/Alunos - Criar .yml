@@ -1,17 +1,17 @@
 info:
-  name: Criar Aluno
+  name: Aluno - Criar
   type: http
-  seq: 5
+  seq: 2
 
 http:
   method: POST
-  url: https://automatic-fortnight-wrqxgq49pw4qh9rpp-3000.app.github.dev/alunos
+  url: "{{baseUrl}}/alunos"
   body:
     type: json
     data: |-
       {
         "nome": "João Teste",
-        "email": "joao@email.com",
+        "email": "joaoteste@email.com",
         "senhaHash": "hash_temporario_456",
         "cidade": "Salinas"
       }

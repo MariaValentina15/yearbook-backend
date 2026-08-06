@@ -1,0 +1,4 @@
+name: local
+variables:
+  - name: baseUrl
+    value: https://automatic-fortnight-wrqxgq49pw4qh9rpp-3000.app.github.dev

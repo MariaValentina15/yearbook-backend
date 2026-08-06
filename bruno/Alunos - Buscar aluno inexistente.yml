@@ -1,0 +1,27 @@
+info:
+  name: Alunos - Buscar aluno inexistente
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{baseUrl}}/alunos/999"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("deve retornar status 404 para aluno inexistente", function() {
+          expect(res.getStatus()).to.equal(404);
+        });
+
+        test("deve retornar mensagem de erro", function() {
+          expect(res.getBody().erro).to.equal('Aluno não encontrado');
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

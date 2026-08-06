@@ -1,11 +1,11 @@
 info:
-  name: Deletar Aluno
+  name: Alunos - Deletar erro
   type: http
   seq: 7
 
 http:
   method: DELETE
-  url: https://bug-free-umbrella-wrqxgq49p6qqc9qpj-3000.app.github.dev/alunos/5
+  url: "{{baseUrl}}/alunos/999"
   auth: inherit
 
 settings:

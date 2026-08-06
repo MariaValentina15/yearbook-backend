@@ -1,0 +1,34 @@
+info:
+  name: Alunos - Atualizar
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/alunos/4"
+  body:
+    type: json
+    data: |-
+      {
+        "cidade":"Curral de dentro"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("deve retornar status 200", function() {
+          expect(res.getStatus()).to.equal(200);
+        });
+
+        test("não deve retornar senhaHash", function() {
+          expect(res.getBody()).to.not.have.property('senhaHash');
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+​
