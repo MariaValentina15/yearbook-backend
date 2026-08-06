@@ -1,6 +1,7 @@
 // 1. Imports
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 import logger from './middlewares/logger.js';
 import tratarErro from './middlewares/erro.js'; 
 import alunosRouter from './routes/alunos.js';
@@ -11,6 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;  // lê do .env, com fallback para 3000
 
 // 3. Middlewares globais (na ordem correta)
+app.use(cors());
 app.use(express.json());    // parseia body JSON
 app.use(logger);            // registra log
 

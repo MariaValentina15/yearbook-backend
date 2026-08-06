@@ -274,3 +274,9 @@ Remove uma mensagem do mural.
   - `403` — Apenas o dono da mensagem ou um administrador podem excluir
   - `404` — Mensagem não encontrada
   - `500` — Erro interno do servidor
+
+  ## CORS
+
+Esta API tem CORS habilitado para qualquer origem. Você pode consumi-la
+de qualquer domínio (localhost, Vercel, etc.) sem configuração adicional
+no cliente.
