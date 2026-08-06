@@ -5,8 +5,33 @@ info:
 
 http:
   method: POST
-  url: https://bug-free-umbrella-wrqxgq49p6qqc9qpj-3000.app.github.dev/
+  url: https://automatic-fortnight-wrqxgq49pw4qh9rpp-3000.app.github.dev/alunos
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "João Teste",
+        "email": "joao@email.com",
+        "senhaHash": "hash_temporario_456",
+        "cidade": "Salinas"
+      }
   auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("deve retornar status 201", function() {
+          expect(res.getStatus()).to.equal(201);
+        });
+
+        test("não deve retornar senhaHash", function() {
+          expect(res.getBody()).to.not.have.property('senhaHash');
+        });
+
+        test("deve retornar o nome do aluno criado", function() {
+          expect(res.getBody().nome).to.equal('João Teste');
+        });
 
 settings:
   encodeUrl: true

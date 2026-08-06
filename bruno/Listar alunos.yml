@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://bug-free-umbrella-wrqxgq49p6qqc9qpj-3000.app.github.dev/alunos
+  url: https://automatic-fortnight-wrqxgq49pw4qh9rpp-3000.app.github.dev/alunos
   auth: inherit
 
 settings:

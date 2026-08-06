@@ -2,6 +2,17 @@
 CREATE TYPE "Role" AS ENUM ('USER', 'ADMIN');
 
 -- CreateTable
+CREATE TABLE "Mensagem" (
+    "id" SERIAL NOT NULL,
+    "texto" TEXT NOT NULL,
+    "imagemUrl" TEXT,
+    "autorId" INTEGER NOT NULL,
+    "criadoEm" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Mensagem_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "Aluno" (
     "id" SERIAL NOT NULL,
     "nome" TEXT NOT NULL,
@@ -15,17 +26,6 @@ CREATE TABLE "Aluno" (
     "criadoEm" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Aluno_pkey" PRIMARY KEY ("id")
-);
-
--- CreateTable
-CREATE TABLE "Mensagem" (
-    "id" SERIAL NOT NULL,
-    "texto" TEXT NOT NULL,
-    "imagemUrl" TEXT,
-    "autorId" INTEGER NOT NULL,
-    "criadoEm" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
-    CONSTRAINT "Mensagem_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
