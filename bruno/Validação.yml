@@ -4,8 +4,8 @@ info:
   seq: 14
 
 http:
-  method: POST
-  url: "{{baseUrl}}"
+  method: GET
+  url: "{{baseUrl}}/"
   auth: inherit
 
 settings:
@@ -13,4 +13,3 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-​

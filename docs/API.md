@@ -8,8 +8,10 @@
     - Rotas protegidas exigem header `Authorization: Bearer <token>`
     - O campo `senhaHash` nunca é retornado em nenhuma resposta
     - Erros seguem o formato `{ "erro": "mensagem descritiva" }`
-    ## Auth
-    ## Alunos 
+
+## Auth
+
+## Alunos 
 
 ### POST /auth/register
 
@@ -277,6 +279,4 @@ Remove uma mensagem do mural.
 
   ## CORS
 
-Esta API tem CORS habilitado para qualquer origem. Você pode consumi-la
-de qualquer domínio (localhost, Vercel, etc.) sem configuração adicional
-no cliente.
+- Esta API tem CORS habilitado para qualquer origem. Você pode consumi-la de qualquer domínio (localhost, Vercel, etc.) sem configuração adicional no cliente.

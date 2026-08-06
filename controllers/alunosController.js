@@ -11,7 +11,7 @@ const selectSemSenha = {
   fotoUrl: true,
   role: true,
   criadoEm: true,
-  // senhaHash NÃO está aqui — nunca retornado pela API
+  // senhaHash NÃO está aqui — nunca retornado pela API no selectSemSenha
 };
 
 // GET /alunos — lista todos os alunos
@@ -45,7 +45,7 @@ export async function buscarAluno(req, res, next) {
   }
 }
 
-// 🎯 POST /alunos — cria um novo aluno
+// POST /alunos — cria um novo aluno
 export async function criarAluno(req, res, next) {
   try {
     const { nome, email, senhaHash, cidade, frase, planosFuturos } = req.body;
@@ -68,7 +68,7 @@ export async function criarAluno(req, res, next) {
   }
 }
 
-// 🎯 PUT /alunos/:id — atualiza um aluno existente
+// PUT /alunos/:id — atualiza um aluno existente
 export async function atualizarAluno(req, res, next) {
   const { id } = req.params;
   const { nome, email, senhaHash, cidade, frase, planosFuturos } = req.body;
@@ -95,7 +95,7 @@ export async function atualizarAluno(req, res, next) {
   }
 }
 
-// 🎯 DELETE /alunos/:id — deleta um aluno
+// DELETE /alunos/:id — deleta um aluno
 export async function deletarAluno(req, res, next) {
   const { id } = req.params;
 

@@ -20,7 +20,7 @@ export async function listarMensagens(req, res, next) {
   }
 }
 
-// 🎯 POST /mensagens — cria uma nova mensagem
+// POST /mensagens — cria uma nova mensagem
 export async function criarMensagem(req, res, next) {
   try {
     const { texto, imagemUrl, autorId } = req.body;
@@ -44,7 +44,7 @@ export async function criarMensagem(req, res, next) {
   }
 }
 
-// 🎯 DELETE /mensagens/:id — deleta uma mensagem
+// DELETE /mensagens/:id — deleta uma mensagem
 export async function deletarMensagem(req, res, next) {
   try {
     const { id } = req.params;
@@ -62,8 +62,5 @@ export async function deletarMensagem(req, res, next) {
     if (erro.code === 'P2025') {
       return res.status(404).json({ erro: 'Mensagem não encontrada' });
     }
-    
-    // Para outros erros inesperados, mandamos para o middleware global
-    next(erro);
   }
 }
